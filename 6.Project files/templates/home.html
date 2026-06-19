@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI-Enhanced Intrusion Detection System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="{{ url_for('home') }}">🛡️ AI-IDS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="{{ url_for('home') }}">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('predict') }}">Predict</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('alerts') }}">Alerts</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero-section text-white text-center py-5">
+    <div class="container py-4">
+      <h1 class="display-4 fw-bold">AI-Enhanced Intrusion Detection System</h1>
+      <p class="lead mt-3">Real-time network threat detection powered by Machine Learning</p>
+      <div class="mt-4">
+        <a href="{{ url_for('predict') }}" class="btn btn-danger btn-lg me-3">🔍 Analyze Traffic</a>
+        <a href="{{ url_for('dashboard') }}" class="btn btn-outline-light btn-lg">📊 View Dashboard</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Features -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4 fw-bold">Key Features</h2>
+      <div class="row g-4">
+        <div class="col-md-3">
+          <div class="card feature-card h-100 text-center shadow-sm border-0">
+            <div class="card-body p-4">
+              <div class="feature-icon mb-3">🤖</div>
+              <h5 class="fw-bold">ML-Powered Detection</h5>
+              <p class="text-muted">Random Forest classifier trained on NSL-KDD dataset for accurate threat detection.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card feature-card h-100 text-center shadow-sm border-0">
+            <div class="card-body p-4">
+              <div class="feature-icon mb-3">⚡</div>
+              <h5 class="fw-bold">Real-Time Analysis</h5>
+              <p class="text-muted">Analyze network packets in real-time and get instant threat classification.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card feature-card h-100 text-center shadow-sm border-0">
+            <div class="card-body p-4">
+              <div class="feature-icon mb-3">📊</div>
+              <h5 class="fw-bold">Live Dashboard</h5>
+              <p class="text-muted">Visualize alerts and attack statistics with an intuitive dashboard.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card feature-card h-100 text-center shadow-sm border-0">
+            <div class="card-body p-4">
+              <div class="feature-icon mb-3">🔔</div>
+              <h5 class="fw-bold">Alert Logging</h5>
+              <p class="text-muted">All intrusion attempts are logged with timestamps and confidence scores.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Attack Types -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4 fw-bold">Detectable Attack Types</h2>
+      <div class="row g-3 justify-content-center">
+        <div class="col-md-2 text-center">
+          <div class="attack-badge bg-danger text-white rounded p-3">
+            <div class="fs-3">💥</div><strong>DoS</strong>
+            <p class="small mb-0">Denial of Service</p>
+          </div>
+        </div>
+        <div class="col-md-2 text-center">
+          <div class="attack-badge bg-warning text-dark rounded p-3">
+            <div class="fs-3">🔎</div><strong>Probe</strong>
+            <p class="small mb-0">Port Scanning</p>
+          </div>
+        </div>
+        <div class="col-md-2 text-center">
+          <div class="attack-badge bg-info text-white rounded p-3">
+            <div class="fs-3">🔓</div><strong>R2L</strong>
+            <p class="small mb-0">Remote to Local</p>
+          </div>
+        </div>
+        <div class="col-md-2 text-center">
+          <div class="attack-badge bg-dark text-white rounded p-3">
+            <div class="fs-3">👑</div><strong>U2R</strong>
+            <p class="small mb-0">User to Root</p>
+          </div>
+        </div>
+        <div class="col-md-2 text-center">
+          <div class="attack-badge bg-success text-white rounded p-3">
+            <div class="fs-3">✅</div><strong>Normal</strong>
+            <p class="small mb-0">Safe Traffic</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white text-center py-4">
+    <p class="mb-0">&copy; 2026 AI-Enhanced Intrusion Detection System | SmartInternz Final Project</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
